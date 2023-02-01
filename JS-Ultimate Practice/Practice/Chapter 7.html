@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            display: flex;
+            background-color: cyan;
+        }
+        nav li{
+            list-style: none;
+            padding: 0 23px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+            <li>Home</li>
+            <li>About</li>
+            <li>blog</li>
+            <li>Contact</li> 
+    </nav>
+    <table id="table">
+        <tr>
+            <th>First Name</th>
+            <th>Second Name</th>
+            <th>Third Name</th>
+        </tr>
+    </table>
+    <script>
+        //Q1)Create  a navbar and change the color of its first element to red?
+
+        let navItem = document.querySelector("nav").firstElementChild.style.color = "red" ;
+        console.log(navItem);
+        
+        //Q2)Create a table without tbody .now use "view page source" button to check whether it has a tbody or not?
+        // Answer) Not
+        
+        //Q3)Create an element with 3 children now change the color of first and last element to green?
+        let children = document.getElementsByTagName("tr")[0].firstElementChild.style.color = "green"
+        children = document.getElementsByTagName("tr")[0].lastElementChild.style.color = "green"
+       
+        //Q4)Write a javascript code to change background of all <li> tags to cyan?
+            // let colorAllLi = document.getElementsByTagName("li")
+            // Array.from(colorAllLi).forEach((elements) =>{
+            //     elements.style.backgroundColor = "red"
+            // })
+            // console.log(colorAllLi)
+        //Q5)Which of the following is used to look for the fasthest ancester that matches a given CSS selector?
+        //a)matches  (b)closest (c)contains (d)none of these
+    </script>
+</body>
+</html>

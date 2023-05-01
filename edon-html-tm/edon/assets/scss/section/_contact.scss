@@ -1,0 +1,78 @@
+/* 09. contact */
+.contact{
+    &-form-title{
+        font-weight: 600;
+    }
+    &-form-desc{
+        margin-bottom: 35px;
+    }
+    &-form{
+        .group-input{
+            display: flex;
+            justify-content: space-between;
+            @media #{$small-mobile2}{
+                flex-direction: column;
+            }
+        }
+        .form-field{
+            width: 100%;
+        }
+        .input-field{
+            width: 100%;
+            height: 80px;
+            padding: 30px;
+        }
+        .textarea-field{
+            width: 100%;
+            height: 200px;
+            padding: 30px;
+        }
+        .btn{
+            height: 80px;
+        }
+    }
+    &-info{
+        li{
+            display: flex;
+            &:not(:last-child){
+                padding-bottom: 15px;
+            }
+            i{
+                width: 40px;
+                height: 40px;
+                display: block;
+                font-size: 30px;
+                color: $secondary_color;
+                margin-right: 10px;
+            }
+            a{
+                width: calc(100% - 40px);
+                display: block;
+                font-size: 16px;
+            }
+        }
+    }
+    &-info-wrap{
+        .social-link{
+            padding-top: 60px;
+            display: flex;
+            li{
+                &:not(:last-child){
+                    padding-right: 30px;
+                }
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* ---Google Map--- */
+.map{
+    &-size{
+        width: 100%;
+        min-height: 415px;
+        margin-bottom: -10px;
+    }
+}

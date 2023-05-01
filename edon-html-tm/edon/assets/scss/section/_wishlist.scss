@@ -1,0 +1,33 @@
+/* 20. wishlist */
+.wishlist-area{
+    .table{
+        & > :not(:last-child){
+            & > :last-child > *{
+                border-bottom-color: #dee2e6;
+            }
+        }
+    }
+    .table{
+        & > :not(caption) > * > *{
+            vertical-align: middle;
+            text-align: center;
+            border-right: 1px solid #dee2e6;
+            padding: 15px;
+        }
+    }
+    @media #{$large-mobile}{
+        .table-content{
+            table{
+                thead{
+                    tr{
+                        display: none;
+                    }
+                }
+                td {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}

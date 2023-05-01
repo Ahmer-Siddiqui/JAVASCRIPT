@@ -1,0 +1,25 @@
+/* 10. error 404 */
+.error-404_area{
+    .error-404_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h1{
+            color: $secondary_color;
+            line-height: 150px;
+            font-size: 150px;
+            padding-bottom: 35px;
+        }
+        h2{
+            &.sub-title{
+                padding-bottom: 20px;
+                line-height: 55.2px;
+                font-size: 46px;
+            }
+        }
+        .error-btn_wrap{
+            padding-top: 35px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/* 13. login | register */
+.login-register_area {
+	padding-bottom: 100px;
+}
+[class*="col-"] {
+	&:first-child {
+		form {
+			.login-form {}
+		}
+	}
+}
+.login-form {
+	background-color: $white;
+	padding: 30px;
+	-webkit-box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.1);
+	.login-title {
+		font-size: 20px;
+		line-height: 23px;
+		text-transform: capitalize;
+		font-weight: 700;
+		margin-bottom: 0;
+		padding-bottom: 20px;
+	}
+	label {
+		display: block;
+		font-size: 14px;
+		margin-bottom: 12px;
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+	input {
+		width: 100%;
+		background-color: transparent;
+		border: 1px solid #e5e5e5;
+		border-radius: 0;
+		line-height: 23px;
+		padding: 10px 20px;
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	input[type="checkbox"] {
+		width: auto;
+	}
+}
+
+.login-form {
+	.check-box {
+        display: flex;
+        align-items: center;
+		input{
+            margin-right: 10px;
+        }
+        label,
+        input{
+            margin-bottom: 0;
+        }
+	}
+}
+.forgotton-password_info {
+	a{
+		font-size: 14px;
+	}
+}
+
+/*-- Place Order --*/
+.login_btn,
+.register_btn {
+	background-color: #000000;
+	color: $white;
+	display: block;
+	margin-top: 30px;
+	width: 140px;
+	border-radius: 0;
+	height: 40px;
+	line-height: 40px;
+	border: 0;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		background: $secondary_color;
+	}
+}
+.register_btn {
+	margin-top: 15px;
+}

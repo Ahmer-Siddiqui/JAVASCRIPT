@@ -1,0 +1,53 @@
+/* 11. faq */
+.frequently-area{
+    > h2{
+        &.heading{
+            padding-bottom: 60px;
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+    .frequently-item{
+        > ul{
+            > li{
+                margin-bottom: 30px;
+                &.has-sub,
+                &.children{
+                    border: 1px solid #e5e5e5;
+                    padding: 20px;
+                    > a{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        i{
+                            font-size: 20px;
+                        }
+                    }
+                    > ul{
+                        &.frequently-body{
+                            display: none;
+                            padding-top: 20px;
+                            > li{
+                                font-size: 12px;
+                                line-height: 21.6px;
+                            }
+                        }
+                    }
+                    &.open{
+                        > a{
+                            color: $secondary_color;
+                            > i{
+                                &:before{
+                                    content: "\f462";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

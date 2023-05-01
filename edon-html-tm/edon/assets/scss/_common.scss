@@ -1,0 +1,345 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body{
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    font-family: $poppins;
+    color: $fonts_color;
+    letter-spacing: 0.02em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin-top: 0;
+    font-family: $poppins;
+}
+h1 {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+}
+h2 {
+    font-size: 36px;
+    line-height: 36px;
+}
+h3 {
+    font-size: 30px;
+    line-height: 30px;
+}
+h4 {
+    font-size: 16px;
+    line-height: 19px;
+}
+h5 {
+    font-size: 14px;
+    line-height: 18px;
+}
+h6 {
+    font-size: 12px;
+    line-height: 14px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+a, button {
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a, button, img, input, span {
+    transition: all 0.3s ease 0s;
+}
+.btn-check:active + .btn-primary:focus, .btn-check:checked + .btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show > .btn-primary.dropdown-toggle:focus {
+	box-shadow: none;
+}
+.btn:focus{
+    box-shadow: none;
+}
+*:focus {
+    outline: none !important;
+}
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+img {max-width:100%;height:auto}
+.img-full{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+figure{
+    padding: 0;
+    margin: 0;
+}
+a{
+    &:hover{
+        color: $secondary_color;
+    }
+}
+/*-- 
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.hidden {
+    display: none;
+}
+.clear{
+    clear: both;
+}
+
+.container{
+    @media #{$extrabig-device}{
+        max-width: 1200px;
+    }
+}
+
+.container.custom-space{
+    @media #{$extrabig-device}{
+        padding-left: 70px;
+        padding-right: 70px;
+        max-width: 100%;
+    }
+    @media #{$laptop-device}{
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.no-gutters > .col, .no-gutters > [class*="col-"] {
+	padding-right: 0;
+	padding-left: 0;
+    margin: 0;
+}
+
+/*--
+  -  Fonts color
+------------------------------*/
+.text-black{
+    color: $black;
+}
+
+
+/*-- 
+    - Background color
+-----------------------------------------*/
+.bg-white {
+    background-color: $white;
+}
+
+.bg-grey {
+    background-color: #f8f8f8;
+}
+.bluewood-bg {
+    background: #354b65;
+}
+
+
+
+/*-- 
+    - Input Placeholder
+-----------------------------------------*/
+input:-moz-placeholder, textarea:-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/*-- 
+    Scroll Up 
+-----------------------------------------*/
+
+#scrollUp {
+    background: $secondary_color none repeat scroll 0 0;
+    border-radius: 100%;
+	bottom: 85px;
+	color: $white;
+	cursor: pointer;
+	display: none;
+	font-size: 20px;
+	height: 45px;
+	line-height: 39px;
+	position: fixed;
+	right: 12px;
+	text-align: center;
+	width: 45px;
+	z-index: 9999;
+	border: 2px solid $white;
+	-webkit-transition: .3s;
+	transition: .3s;
+     &:hover i {
+        animation-name: fadeInUp;
+        animation-duration:1s;
+        animation-fill-mode:both;
+        animation-iteration-count: infinite;
+    }
+}
+
+/* ---Button--- */
+.btn{
+    &-primary-hover{
+        &:hover{
+            background-color: $secondary_color;
+            border-color: $secondary_color;
+        }
+    }
+    &-fixed-size{
+        font-size: 14px;
+        height: 40px;
+        line-height: 37px;
+        width: 130px;
+        padding: 0;
+    }
+}
+
+
+
+/* ---Section Space--- */
+/* -Padding Top- */
+.pt-100{
+    padding-top: 100px;
+}
+.pt-95{
+    padding-top: 95px;
+}
+.pt-90{
+    padding-top: 90px;
+}
+.pt-85{
+    padding-top: 85px;
+}
+.pt-80{
+    padding-top: 80px;
+}
+.pt-75{
+    padding-top: 75px;
+}
+/* -End Here- */
+
+/* -Padding Bottom- */
+.pb-100{
+    padding-bottom: 100px;
+}
+.pb-95{
+    padding-bottom: 95px;
+}
+.pb-90{
+    padding-bottom: 90px;
+}
+.pb-85{
+    padding-bottom: 85px;
+}
+.pb-80{
+    padding-bottom: 80px;
+}
+.pb-75{
+    padding-bottom: 75px;
+}
+/* -End Here- */
+
+/* -Padding Y Axis- */
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.py-95{
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+.py-90{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.py-85{
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+.py-80{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/* -End Here- */
+
+/* -Padding X Axis- */
+.px-xl-180{
+    @media #{$min-large-device}{
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+}
+/* -End Here- */
+
+/* ---Sub Section Space--- */
+.mb-45{
+    margin-bottom: 45px;
+}
+.mb{
+    &-xs{
+        &-30{
+            @media #{$small-mobile2}{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.me-30{
+    margin-right: 30px;
+}
+.me{
+    &-xs{
+        &-30{
+            @media #{$min-small-mobile2}{
+                margin-right: 30px;
+            }
+        }
+    }
+}
